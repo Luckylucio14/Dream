@@ -23,8 +23,7 @@ user4 = User.create!(first_name:"John", last_name:"Hammond", email:"john.hammond
 file = URI.open("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/201a0f9a-2ea5-4b1e-a384-cd30528233e1/images.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221122%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221122T170433Z&X-Amz-Expires=86400&X-Amz-Signature=b73aacd1c0801ffd2ead03eab974dcda329b8c35844e5986886b1d4b9072c676&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22images.jpg%22&x-id=GetObject")
 star1 = Star.create!(name:"Acrux", location:"Croix du Sud '63° 05 56,58/57 ", atmosphere: "climat froid ", capacity:" 10", price_per_night:"2500$", user: user1)
 
-article.photo.attach(io: file, filename: "star1.png", content_type: "image/png")
-star.save
+star1.photo.attach(io: file, filename: "star1.png", content_type: "image/png")
 
 star2 =Star.create!(name:"Cajam",location:"+14° 01’59,755" "Omega Herculis", atmosphere:"climat tempéré ", capacity: "15 ", price_per_night:"2100$", user: user1)
 star3 =Star.create!(name:"Céléno",location:"+24° 17 22,094″  Tauri", atmosphere:" climat tropical", capacity: "20", price_per_night:"3815$", user: user1)
