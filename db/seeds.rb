@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+#   Character.create(name: "Luke", movie: movies.first)
+>>>>>>> 1111e06d3cd131c612e2f68e7fe3880bdbecf0c7
 require "open-uri"
 
 
@@ -70,7 +80,6 @@ star:        star1,
     status:      "accepted",
     total_price: "5000$"
 )
-
 booking2 = Booking.create!(
     star:        star2,
     user:        user1,
