@@ -4,6 +4,18 @@
 
 <table>
 <thead>
+    <% @stars.each do |star| %>
+    <tr>
+      <th><%= star.name %></th>
+      <th><%= star.location %></th>
+      <th><%= star.capacity %></th>
+      <th><%= star.climat %></th>
+      <th><%= star.price_per_night %></th>
+      <th colspan="3"></th>
+      </tr>
+    <% end %>
+
+
     <tr>
     <th>Acrux</th>
     <th>"Croix du Sud '63° 05 56,58/57</th>
