@@ -58,7 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_153334) do
   create_table "stars", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.string "atmosphere"
+    t.string "climate"
     t.integer "capacity"
     t.string "price_per_night"
     t.bigint "user_id", null: false
