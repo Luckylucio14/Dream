@@ -85,6 +85,16 @@ booking2 = Booking.create!(
     status:      "pending",
     total_price: "6300$"
 )
+
+booking2 = Booking.create!(
+  star:        star8,
+  user:        user3,
+  arrival_date: "2022-12-18",
+  departure_date:   "2022-12-20",
+  status:      "pending",
+  total_price: "13480$"
+)
+
 booking3 = Booking.create!(
     star:        star3,
     user:        user3,
