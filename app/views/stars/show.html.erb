@@ -1,0 +1,18 @@
+
+
+<div class="container">
+<div class="photo">
+  <%= cl_image_tag @star.photo.key, height: 500, width: 1000, crop: :fill %>
+  </div>
+  <div class="card-body">
+    <h1> <%= @star.name%></h1>
+    <h4> <%= @star.climate%></h4>
+    <h3><%= @star.capacity%></h3>
+    <h2> <%= @star.price_per_night%></h2>
+    <div class="btn">
+    <button type="button" class="button">Reserver</button>
+    </div>
+
+
+  </div>
+</div>
