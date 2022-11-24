@@ -5,6 +5,7 @@
 <div class="cards-container">
   <% @stars.each do |star| %>
     <div class="card">
+    
       <div class="card-image"><%= cl_image_tag star.photo.key %></div>
       <div class="card-description">
         <%= link_to star.name, star_path(star) %>
