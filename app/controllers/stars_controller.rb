@@ -7,7 +7,9 @@ class StarsController < ApplicationController
 
   def show
     @star = Star.find(params[:id])
+    @booking = Booking.new
   end
+
 
   def new
     @star = Star.new
@@ -36,3 +38,4 @@ class StarsController < ApplicationController
   params.require(:star).permit(:name, :location, :climate, :capacity, :price_per_night, :user_id, :created_at, :updated_at, :photo)
   end
 end
+
