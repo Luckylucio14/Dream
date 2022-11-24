@@ -5,12 +5,12 @@ Rails.application.routes.draw do
   resources :stars, only: [:index, :show] do
     resources :bookings, only: [:create]
   end
-  
+
   namespace :host do
     resources :stars, only: [:new, :create]
 
-    resources :bookings, only: [] do
-      member do 
+    resources :bookings, only: [:index] do
+      member do
         patch :accept
         patch :decline
       end
@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   end
 
   resource :dashboard, only: :show
-end 
+end
   # Defines the root path route ("/")
   # root "articles#index"
