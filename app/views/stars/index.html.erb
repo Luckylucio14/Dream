@@ -2,16 +2,18 @@
 
 <h1>Stars</h1>
 
-<table>
-<thead>
+<div class="cards-container">
   <% @stars.each do |star| %>
-    <tr>
-      <th><%= link_to star.name, star_path(star) %></th>
-      <th><%= star.location %></th>
-      <th><%= star.capacity %></th>
-      <th><%= star.climate %></th>
-      <th><%= star.price_per_night %></th>
-      <th colspan="3"></th>
-    </tr>
+    <div class="card">
+    
+      <div class="card-image"><%= cl_image_tag star.photo.key %></div>
+      <div class="card-description">
+        <%= link_to star.name, star_path(star) %>
+        <%= star.location %>
+        <%= star.capacity %>
+        <%= star.climate.downcase %>
+        <%= star.price_per_night %>
+      </div>
+    </div>
   <% end %>
-
+</div>
