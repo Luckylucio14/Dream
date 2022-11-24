@@ -5,6 +5,7 @@ class StarsController < ApplicationController
       @stars = Star.all
     end
 
-  def show
-    @star = Star.find(params[:id])
+    def show
+      @star = Star.find(params[:id])
+    end
   end
