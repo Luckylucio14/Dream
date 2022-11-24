@@ -13,11 +13,11 @@ user2 = User.create!(first_name:"Ruben", last_name:"Hernandez", email:"ruruH1987
 user3 = User.create!(first_name:"Emmett", last_name:"Brown", email:"emmett.brown@gmail.com", password:"Retourverslefutur1985!")
 user4 = User.create!(first_name:"John", last_name:"Hammond", email:"john.hammond@wanadoo.fr", password:"Trex4ever!")
 puts 'Creating stars...'
-file = URI.open("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/201a0f9a-2ea5-4b1e-a384-cd30528233e1/images.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221122%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221122T170433Z&X-Amz-Expires=86400&X-Amz-Signature=b73aacd1c0801ffd2ead03eab974dcda329b8c35844e5986886b1d4b9072c676&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22images.jpg%22&x-id=GetObject")
+file = URI.open("https://trustmyscience.com/wp-content/uploads/2021/05/gravite-intense-etoiles-neutrons-les-rend-incroyablement-lisses-couv.jpeg")
 star1 = Star.create!(name:"Acrux", location:"Croix du Sud '63° 05 56,58/57 ", climate: "climat froid ", capacity:" 10", price_per_night:"2500$", user: user1)
 star1.photo.attach(io: file, filename: "star1.png", content_type: "image/png")
 
-file = URI.open("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fa1c011b-b4d8-402d-85dc-0f8ce9d96fad/template_primary.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221123T095905Z&X-Amz-Expires=86400&X-Amz-Signature=39bfeb5fedb882272a5a523e5bdef51f9cc5c752f283618aa6d80dc1c355b824&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22template_primary.jpg%22&x-id=GetObject")
+file = URI.open("https://www.rts.ch/2017/03/31/11/01/7657284.image?w=1280&h=720")
 star2 =Star.create!(name:"Cajam",location:"+14° 01’59,755" "Omega Herculis", climate:"climat tempéré ", capacity: "15 ", price_per_night:"2100$", user: user1)
 star2.photo.attach(io: file, filename: "star2.png", content_type: "image/png")
 
@@ -25,11 +25,11 @@ file = URI.open("https://cdn.futura-sciences.com/sources/images/actu/supernova-v
 star3 =Star.create!(name:"Céléno",location:"+24° 17 22,094″  Tauri", climate:" climat tropical", capacity: "20", price_per_night:"3815$", user: user1)
 star3.photo.attach(io: file, filename: "star3.png", content_type: "image/png")
 
-file = URI.open("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/96af8ea5-e42e-4462-b3e2-6795e063e3ac/astronomie-c-est-quoi-la-nuit-des-etoiles_4721276.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221123T100601Z&X-Amz-Expires=86400&X-Amz-Signature=7af6bf86b105cea4f4a4f6b381ccc9e10ddce81e10646752a12b14ae07af3bbe&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22astronomie-c-est-quoi-la-nuit-des-etoiles_4721276.jpg%22&x-id=GetObject")
+file = URI.open("https://pbs.twimg.com/media/EUj5EVYX0AURjJK?format=jpg&name=small")
 star4 =Star.create!(name:"Diadème",location:"+17° 31 45,953″ Alpha_Comae_Berenices", climate: " climat tropical ", capacity:"23 ", price_per_night:"3815$", user: user2)
 star4.photo.attach(io: file, filename: "star4.png", content_type: "image/png")
 
-file = URI.open("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b4344289-8489-4161-8d32-8e5d0c9de37e/01_betelgeuse_eso0927e.adapt_.1900.1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221123T100626Z&X-Amz-Expires=86400&X-Amz-Signature=ea3d56abe8cab691d34794a9692be8916de08e2b2071a2a46b9faab5c37a5ca1&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%2201_betelgeuse_eso0927e.adapt_.1900.1.jpg%22&x-id=GetObject")
+file = URI.open("https://www.onefm.ch/wp-content/uploads/2020/04/nasa-cover.jpg")
 star5 =Star.create!(name:"Electra",location:" +24° 06 48″ tauri", climate:"climat désertique ", capacity: "25", price_per_night:"1960$", user: user2)
 star5.photo.attach(io: file, filename: "star5.png", content_type: "image/png")
 

@@ -1,0 +1,11 @@
+<div class="title_dashboard">
+<h1 class="title_dashboard">Mon dashboard</h1>
+
+<p> <%= @booking.first.status%></p>
+<p> <% @star.each do |detail| %>
+  <%= detail.name %>
+  <%= detail.location %>
+  <%= detail.climate %>
+  <%= detail.price_per_night%>
+<% end %></p>
+</div>
