@@ -1,18 +1,70 @@
 
-
 <div class="container">
-<div class="photo">
-  <%= cl_image_tag @star.photo.key, height: 500, width: 1000, crop: :fill %>
-  </div>
-  <div class="card-body">
-    <h1> <%= @star.name%></h1>
-    <h4> <%= @star.climate%></h4>
-    <h3><%= @star.capacity%></h3>
-    <h2> <%= @star.price_per_night%></h2>
-    <div class="btn">
-    <button type="button" class="button">Reserver</button>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-7">
+      <%= cl_image_tag @star.photo.key, height: 474, width: 750,crop: :fill %>
+        <div class="flexbox">
+          <%# name %>
+          <div class="name">
+            <h1><%= @star.name%>💫</h1>
+          </div>
+          <%# climate %>
+          <div class="climate">
+            <h1> <%= @star.climate%>🌡</h1>
+          </div>
+          <%# capacity %>
+          <div class="capacity">
+            <h1>👨‍👨‍👧‍👦<%= @star.capacity%></h1>
+          </div>
+          <%# pricepernight %>
+          <div class="ppn">
+            <h1> <%= @star.price_per_night%></h1>
+          </div>
+        </div>
     </div>
 
+        <div class="col-12 col-lg-5">
+        <%# nombre de personnes %>
+        <div class="calendar">
+          <div class="host">
+            <p>🔑Processus d'arrivée <strong>fantastique.</strong></p>
+            <p>✈️100 % de voyageurs récents ont attribué 5 🌟🌟🌟🌟🌟 au processus d'enregistrement.</p>
 
+            <p>👩🏼‍🚀👨🏽‍🚀Le propietaire de <strong><%= @star.name%></strong> est un <strong>Superhost.</strong>
+            <p>🥇Les 🦸🏼Superhosts🦸🏻‍♀️ sont des hôtes expérimentés très bien notés qui font tout leur
+            possible pour offrir aux clients des séjours inoubliables🤩.</p>
+            <p>📆Annulation <strong>gratuite</strong> 48 heures avant la date de reservation.</p>
+
+          </div>
+
+            <div class="reservation">
+              <label for="personnes">Nombre de personnes:</label>
+
+              <input type="number" id="tentacles" name="nombre de personnes"
+                 min="1" max="100">
+        <%# start date %>
+                <label for="start">Date de depart:</label>
+
+                <input type="date" id="start" name="trip-start"
+                value="2022-11-22"
+                min="2022-11-01" max="2025-12-31">
+                <%# end of date %>
+
+                <label for="start">Date d'arrivée:</label>
+
+                <input type="date" id="start" name="trip-start"
+                value="2022-11-22"
+                min="2018-01-01" max="2018-12-31">
+
+                  <button class="button"> Reserver une place dans cette etoile</button>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      <!-- This div is centered and takes 6 columns -->
+    </div>
   </div>
 </div>
