@@ -1,21 +1,25 @@
 <%= render "shared/navbar" %>
 <p id="notice"><%= notice %></p>
 
-<h1>Stars</h1>
+<h1 id="index_h1">Stars</h1>
 
 <div class="cards-container">
   <% @stars.each do |star| %>
-    <div class="card" >
+    <%= link_to  star_path(star) do %>
+      <div class="card" >
 
-      <div class="card-image"><%= cl_image_tag star.photo.key %></div>
-      <div class="card-description">
-        <%= link_to star.name, star_path(star) %>
-        <%= star.location %>
-        <%= star.capacity %>
-        <%= star.climate.downcase %>
-        <%= star.price_per_night %>
+        <div class="card-image"><%= cl_image_tag star.photo.key %></div>
+        <div class="card-description">
+        <div id= "card-name">
+          <p><%=  star.name %></p>
+          <p><%= star.price_per_night %></p>
+        </div>
+          <p><%= star.location %></p>
+        <%# <%= star.capacity %>
+        <%# <%= star.climate.downcase %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
 <%= render "shared/footer" %>
