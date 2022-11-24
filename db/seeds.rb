@@ -8,7 +8,7 @@ User.destroy_all
 
 puts 'Creating user...'
 
-user1 = User.create!(first_name:"Hubert", last_name:"Farnsworth", email:"hubert.farnsworth@gmail.com", password:"kdsjgJB15$")
+user1 = User.create!(first_name:"Hubert", last_name:"Farnsworth", email:"hubert.farnsworth@gmail.com", password:"kdsjgJB15")
 user2 = User.create!(first_name:"Ruben", last_name:"Hernandez", email:"ruruH1987@gmail.com", password:"halaMadrid!")
 user3 = User.create!(first_name:"Emmett", last_name:"Brown", email:"emmett.brown@gmail.com", password:"Retourverslefutur1985!")
 user4 = User.create!(first_name:"John", last_name:"Hammond", email:"john.hammond@wanadoo.fr", password:"Trex4ever!")
@@ -81,7 +81,7 @@ booking2 = Booking.create!(
 
 booking2 = Booking.create!(
   star:        star8,
-  user:        user3,
+  user:        user4,
   arrival_date: "2022-12-18",
   departure_date:   "2022-12-20",
   status:      "pending",
