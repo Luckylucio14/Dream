@@ -2,7 +2,8 @@ class DashboardsController < ApplicationController
   def show
     @bookings = Booking.where(user: current_user)
     @stars = Star.where(user: current_user)
-    @star_books = Booking.includes(:star).where(star: { user: current_user })
+    @books_stars = Booking.includes(:star).where(star: { user: current_user })
+    @user = current_user
   end
 
   private

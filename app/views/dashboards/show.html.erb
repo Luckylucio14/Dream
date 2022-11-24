@@ -4,27 +4,27 @@
 <h1 class="title_dashboard">Mon dashboard</h1>
 
 <% @bookings.each do |element|%>
-    <%= element.status %>
+  <%= element.status %>
   <%= element.arrival_date %>
   <%= element.departure_date %>
   <%= element.total_price%>
 <% end %>
 
-
-<div>
-<p> <% @stars.each do |detail| %>
+<% @stars.each do |detail| %>
   <%= detail.name %>
   <%= detail.price_per_night%>
-<% end %></p>
-</div>
+<% end %>
 
-<%# <%= @star_books %>
 
-<%= @star_books.each do |detail_star| %>
-    <%= detail_star %>
 
-    <%# <%= detail_star.status %>
-    <%# <%= detail_star.total_price %>
+<% @books_stars.each do |booking| %>
+  <%= booking.star.name %>
+  <%= booking.star.price_per_night %>
+  <%= booking.status %>
+  <%= booking.total_price %>
 
 <% end %>
+
+
+
 <%= render "shared/footer" %>
