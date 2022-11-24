@@ -7,5 +7,6 @@ class StarsController < ApplicationController
 
   def show
     @star = Star.find(params[:id])
+    @booking = Booking.new
   end
 end
