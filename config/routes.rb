@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :stars, only: [:new, :create]
 
     resources :bookings, only: [:index] do
+
       member do
         patch :accept
         patch :decline
