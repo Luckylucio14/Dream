@@ -18,9 +18,16 @@
 <% end %>
 <div class= "page-dash">
 
+
+
+
+
   <%= link_to "create star", new_host_star_path %>
+
   <div class = "container_dash">
+  <h4 class="button_etoile_dash"><%= link_to "create your etoile", stars_path %></h4>
     <div class="title_dashboard">
+    
 
   <h1>Mon dashboard</h1>
 <%# si size booking = 1 donc element au milieu avec grid, grid area %>
@@ -33,28 +40,38 @@
         <div class="card">
         <div class="card-image"><%= cl_image_tag element.star.photo.key %> </div>
           <div class="card-description">
-            <%= element.status %>
-            <%= element.arrival_date %>
-            <%= element.departure_date %>
-            <%= element.star.name %>
-            <%= element.total_price%>
+            <div>
+              <div class = "booking_star_dispo  etir_margin" ><strong> <%= element.star.name %></strong>
+              <%= element.total_price%></div>
+              <div class = "booking_star_dispo">
+              <div class = "retir_margin"> <strong><%= element.status %> </strong></div>
+                <div><%= element.arrival_date %> </div>
+                <div></div><%= element.departure_date %>
+              </div>
+            </div>
           </div>
         </div>
         <% end %>
       </div>
 
 
+    <h5><div class="card-header margin-head" >My stars </h5></div>
 
 
-    <h5><div class="card-header" >My stars </h5></div>
+
+
+
+
     <div class= "grid-dash">
       <% @stars.each do |detail| %>
       <div class="card">
         <div class = "rassemblement" >
           <div class="card-image"><%= cl_image_tag detail.photo.key %></div>
           <div class="card-description">
-            <%= detail.name %>
-            <%= detail.price_per_night%>
+            <div class = "booking_star_dispo">
+              <div><strong><%= detail.name %></strong></div>
+              <div><%= detail.price_per_night%> </div>
+            </div>
           </div>
         </div>
       </div>
@@ -63,21 +80,35 @@
 
 
 
-  <h5><div class="card-header" >My star booked </h5></div>
+  <h5><div class="card-header margin-head" >My star booked </h5></div>
   <div class= "grid-dash">
     <% @books_stars.each do |booking| %>
       <div class="card">
         <div class="card-image"><%= cl_image_tag booking.star.photo.key %></div>
           <div class="card-description">
-            <%= booking.star.name %>
-            <%= booking.star.price_per_night %>
-            <%= booking.status %>
-            <%= booking.total_price %>
+            <div class = "booking_star_dispo">
+              <div><strong> <%= booking.star.name %></strong></div>
+              <div><%= booking.status %> </div>
+              <div> <%= booking.total_price%></div>
+            </div>
+
+                <div class = "button-dach-accep" >
+                  <form method="patch" class="button_to">
+
+                  <button type="submit">ACCEPT</button>
+                  <input name="authenticity_token" type="hidden" value="10f2163b45388899ad4d5ae948988266befcb6c3d1b2451cf657a0c293d605a6"/>
+                  </form>
+
+                  <form method="patch" class="button_to">
+                  <button type="submit">DECLINE</button>
+                  <input name="authenticity_token" type="hidden" value="10f2163b45388899ad4d5ae948988266befcb6c3d1b2451cf657a0c293d605a6"/>
+                  </form>
+                </div>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
 
 
 
