@@ -6,12 +6,15 @@ class Host::StarsController < ApplicationController
     end
     
     def create
+        raise
         @current_user = current_user
     
         @star = Star.new(star_params)
-        if @star.save
-            redirect_to dashboard_path(@star)
-        end
+        @star.save
+
+    # #     if @star.save
+    #         redirect_to host_stars_path
+    #     end
     end
 
     def destroy

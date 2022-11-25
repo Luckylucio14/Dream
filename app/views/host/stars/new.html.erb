@@ -6,7 +6,7 @@
 
         <h3>Create a new star</h3>
 
-        <%= simple_form_for @star do |f| %>
+        <%= simple_form_for [:host, @star] do |f| %>
             <%= f.input :name, placeholder: 'Name of your star here' %>
             <%= f.input :location, placeholder: 'Where is your star ?' %>
             <%= f.input :capacity, placeholder: 'How many people maximum ?' %>
