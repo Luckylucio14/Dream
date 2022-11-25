@@ -36,7 +36,11 @@
       <% @stars.each do |detail| %>
       <div class="card">
         <div class = "rassemblement" >
-          <div class="card-image"><%= cl_image_tag detail.photo.key %></div>
+          <div class="card-image">
+            <% if detail.photo.present? %>
+              <%= cl_image_tag detail.photo.key %>
+            <% end %>
+          </div>
           <div class="card-description">
             <div class = "booking_star_dispo">
               <div><strong><%= detail.name %></strong></div>
