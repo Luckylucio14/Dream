@@ -1,5 +1,5 @@
 .footer {
-
+  background-color:rgb(233, 228, 228) ;
   display: flex;
   align-items: center;
   // justify-content: space-evenly;
@@ -24,31 +24,38 @@
 }
 .footer-links a {
   color: purple;
-  opacity: 0.15;
+  // opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
+  color: rgb(177, 171, 171);
 }
-.footer .fa-heart {
-  color: #D23333;
-}
+
 .main {
+  color: purple;
   min-height:100%;
   position:relative;
   padding-bottom:100px;   /* Hauteur du pied de page */
 }
 .footer {
-
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    height:30px;
-    width:100%;
-
+  display: flex;
+  justify-content: space-between;
+  color: purple;
+  // position:absolute;
+  bottom:0px;
+  height:30px;
+  width:100%;
 }
+
+// .footer-text {
+//   display: flex;
+//   justify-content: space-between;
+//   font-family: var(--bs-body-font-family);
+//   ;
+// }
 
 .container {
   height:100%;
