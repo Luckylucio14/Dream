@@ -1,0 +1,23 @@
+<div class="container py-5">
+    <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+    <h1>Be like a <strong>GOD</strong>, create a <strong>star</strong></h1>
+        <div class="bg-white rounded p-3 shadow">
+
+        <h3>Create a new star</h3>
+
+        <%= simple_form_for @star do |f| %>
+            <%= f.input :name, placeholder: 'Name of your star here' %>
+            <%= f.input :location, placeholder: 'Where is your star ?' %>
+            <%= f.input :capacity, placeholder: 'How many people maximum ?' %>
+            <%= f.input :climate, placeholder: 'what can I pu in wallet' %>
+            <%= f.input :price_per_night, placeholder: 'How much do you want to get?' %>
+            <%= f.input :picture, as: :file %>
+            <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+        </div>
+    </div>
+    </div>
+</div>
+
+<%= link_to 'Back', dashboard_path %>
