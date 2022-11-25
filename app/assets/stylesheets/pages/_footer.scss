@@ -2,7 +2,6 @@
   background-color:rgb(233, 228, 228) ;
   display: flex;
   align-items: center;
-  // justify-content: space-evenly;
   .item {
     flex-grow: 1;
   }
@@ -24,7 +23,6 @@
 }
 .footer-links a {
   color: purple;
-  // opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
@@ -44,18 +42,10 @@
   display: flex;
   justify-content: space-between;
   color: purple;
-  // position:absolute;
   bottom:0px;
   height:30px;
   width:100%;
 }
-
-// .footer-text {
-//   display: flex;
-//   justify-content: space-between;
-//   font-family: var(--bs-body-font-family);
-//   ;
-// }
 
 .container {
   height:100%;
