@@ -1,8 +1,28 @@
 <%= render "shared/navbar" %>
+<div class = "container_dash">
+<div class="title_dashboard">
+<h1 class="title_dashboard">Mon dashboard</h1>
+
+<% @bookings.each do |element|%>
+  <%= element.status %>
+  <%= element.arrival_date %>
+  <%= element.departure_date %>
+  <%= element.total_price%>
+  <%= link_to "accept", accept_host_booking_path(element) , data: { turbo_method: :patch } %>
+  <%= link_to "decline", decline_host_booking_path(element) , data: { turbo_method: :patch } %>
+<% end %>
+
+<% @stars.each do |detail| %>
+  <%= detail.name %>
+  <%= detail.price_per_night%>
+<% end %>
 <div class= "page-dash">
 
-  <%# <h4 class="button_etoile_dash"><%= link_to "create your etoile", stars_path %>
 
+
+
+
+  <%= link_to "create star", new_host_star_path %>
 
   <div class = "container_dash">
   <h4 class="button_etoile_dash"><%= link_to "create your etoile", stars_path %></h4>
@@ -34,7 +54,14 @@
         <% end %>
       </div>
 
+
     <h5><div class="card-header margin-head" >My stars </h5></div>
+
+
+
+
+
+
     <div class= "grid-dash">
       <% @stars.each do |detail| %>
       <div class="card">
