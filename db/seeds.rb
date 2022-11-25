@@ -50,7 +50,7 @@ star9 =Star.create!(name:"Izar ",location:"+27° 04 27,02″ Bouvier ", climate:
 star9.photo.attach(io: file, filename: "star9.png", content_type: "image/png")
 
 file = URI.open("https://images.unsplash.com/photo-1484589065579-248aad0d8b13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=459&q=80")
-star10 =Star.create!(name:"Jabbah",location:"19° 27 38,3″ Scorpion ", climate: "climat méditérranéen", capacity:"28", price_per_night:"109887$", user: user3)
+star10 =Star.create!(name:"Jabbah",location:"19° 27 38,3″ Scorpion ", climate: "climat méditérranéen", capacity:"28", price_per_night:"1087$", user: user3)
 star10.photo.attach(io: file, filename: "star.10png", content_type: "image/png")
 
 file = URI.open("https://images.unsplash.com/photo-1656052564863-8ef68f491c38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80")
