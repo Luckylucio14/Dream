@@ -10,10 +10,15 @@ Rails.application.routes.draw do
     resources :stars, only: [:new, :create]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     resources :bookings, only: [:index] do
 =======
     resources :bookings, only: [] do
 >>>>>>> bc8ba21371eb804f0a6a211195fb3bfbd220cc39
+=======
+    resources :bookings, only: [:index] do
+
+>>>>>>> a78e85eaddb75bde6715cd7844bd8f28873b99f7
       member do
         patch :accept
         patch :decline
