@@ -1,12 +1,30 @@
+.page-dash{
+  margin: 50px 100px;
+}
+
+
 .title_dashboard {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-#dash_grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 10px;
+// #dash_grid {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-template-rows: repeat(4, 1fr);
+//   grid-column-gap: 20px;
+//   grid-row-gap: 10px;
+//   }
+  .grid-dash{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    margin: 50px 100px;
+  }
+
+  .card-header{
+    margin-left: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
