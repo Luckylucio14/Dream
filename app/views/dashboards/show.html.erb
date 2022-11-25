@@ -1,19 +1,30 @@
 <%= render "shared/navbar" %>
-<div class = "container_dash">
-<div class="title_dashboard">
-<h1 class="title_dashboard">Mon dashboard</h1>
+<div class= "page-dash">
 
-<% @bookings.each do |element|%>
-  <%= element.status %>
-  <%= element.arrival_date %>
-  <%= element.departure_date %>
-  <%= element.total_price%>
-<% end %>
+  <%= link_to "create star",host_stars_path %>
+  <div class = "container_dash">
+    <div class="title_dashboard">
 
-<% @stars.each do |detail| %>
-  <%= detail.name %>
-  <%= detail.price_per_night%>
-<% end %>
+  <h1>Mon dashboard</h1>
+<%# si size booking = 1 donc element au milieu avec grid, grid area %>
+  </div>
+    </div>
+      <h5><div class="card-header" >My booking </h5></div>
+      <div class= "grid-dash">
+
+        <% @bookings.each do |element|%>
+        <div class="card">
+        <div class="card-image"><%= cl_image_tag element.star.photo.key %> </div>
+          <div class="card-description">
+            <%= element.status %>
+            <%= element.arrival_date %>
+            <%= element.departure_date %>
+            <%= element.star.name %>
+            <%= element.total_price%>
+          </div>
+        </div>
+        <% end %>
+      </div>
 
 <form method="patch" class="button_to">
 <button type="submit">ACCEPTED</button>
@@ -27,14 +38,40 @@
 
 
 
-<% @books_stars.each do |booking| %>
-  <%= booking.star.name %>
-  <%= booking.star.price_per_night %>
-  <%= booking.status %>
-  <%= booking.total_price %>
+    <h5><div class="card-header" >My stars </h5></div>
+    <div class= "grid-dash">
+      <% @stars.each do |detail| %>
+      <div class="card">
+        <div class = "rassemblement" >
+          <div class="card-image"><%= cl_image_tag detail.photo.key %></div>
+          <div class="card-description">
+            <%= detail.name %>
+            <%= detail.price_per_night%>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
 
-<% end %>
+
+
+  <h5><div class="card-header" >My star booked </h5></div>
+  <div class= "grid-dash">
+    <% @books_stars.each do |booking| %>
+      <div class="card">
+        <div class="card-image"><%= cl_image_tag booking.star.photo.key %></div>
+          <div class="card-description">
+            <%= booking.star.name %>
+            <%= booking.star.price_per_night %>
+            <%= booking.status %>
+            <%= booking.total_price %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
 
 
+</div>
 <%= render "shared/footer" %>
