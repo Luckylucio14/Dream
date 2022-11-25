@@ -62,8 +62,8 @@
               <div> <%= booking.total_price%></div>
             </div>
                 <div class = "button-dach-accep" >
-                  <%= link_to "accept", accept_host_booking_path(booking) , data: { turbo_method: :patch } %>
-                  <%= link_to "decline", decline_host_booking_path(booking) , data: { turbo_method: :patch } %>
+                  <%= link_to "accept", accept_host_booking_path(booking) , data: { turbo_method: :patch },class: "link" %>
+                  <%= link_to "decline", decline_host_booking_path(booking) , data: { turbo_method: :patch },class: "link"%>
                 </div>
             </div>
           </div>
