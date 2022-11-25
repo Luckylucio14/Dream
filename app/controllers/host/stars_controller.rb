@@ -4,17 +4,16 @@ class Host::StarsController < ApplicationController
     def new
         @star = Star.new
     end
-    
-    def create
-        raise
-        @current_user = current_user
-    
-        @star = Star.new(star_params)
-        @star.save
 
-    # #     if @star.save
-    #         redirect_to host_stars_path
-    #     end
+    def create
+      @star = Star.new(star_params)
+      @star.user = current_user
+
+      if @star.save!
+        redirect_to dashboard_path
+      else
+        render "new", status: :unprocessable_entity
+      end
     end
 
     def destroy
