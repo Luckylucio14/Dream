@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   namespace :host do
     resources :stars, only: [:new, :create]
 
+<<<<<<< HEAD
     resources :bookings, only: [:index] do
+=======
+    resources :bookings, only: [] do
+>>>>>>> bc8ba21371eb804f0a6a211195fb3bfbd220cc39
       member do
         patch :accept
         patch :decline

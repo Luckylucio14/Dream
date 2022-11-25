@@ -1,0 +1,30 @@
+<%= render "shared/navbar" %>
+<div class = "container_dash">
+<div class="title_dashboard">
+<h1 class="title_dashboard">Mon dashboard</h1>
+
+<% @bookings.each do |element|%>
+  <%= element.status %>
+  <%= element.arrival_date %>
+  <%= element.departure_date %>
+  <%= element.total_price%>
+<% end %>
+
+<% @stars.each do |detail| %>
+  <%= detail.name %>
+  <%= detail.price_per_night%>
+<% end %>
+
+
+
+<% @books_stars.each do |booking| %>
+  <%= booking.star.name %>
+  <%= booking.star.price_per_night %>
+  <%= booking.status %>
+  <%= booking.total_price %>
+
+<% end %>
+
+
+
+<%= render "shared/footer" %>
