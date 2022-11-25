@@ -1,3 +1,12 @@
-.title_navbar h1 {
+.title_dashboard {
   display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+#dash_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  }

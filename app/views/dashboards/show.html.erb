@@ -1,29 +1,46 @@
 <%= render "shared/navbar" %>
 <div class = "container_dash">
 <div class="title_dashboard">
-<h1 class="title_dashboard">Mon dashboard</h1>
+<h1>Mon dashboard</h1>
 
-<% @bookings.each do |element|%>
-  <%= element.status %>
-  <%= element.arrival_date %>
-  <%= element.departure_date %>
-  <%= element.total_price%>
-<% end %>
+<div id = "dash_grid">
+  <% @bookings.each do |element|%>
+    <div class="pas_idee" >
 
-<% @stars.each do |detail| %>
-  <%= detail.name %>
-  <%= detail.price_per_night%>
-<% end %>
+      <%= element.status %>
+      <%= element.arrival_date %>
+      <%= element.departure_date %>
+      <%= element.total_price%>
+    </div>
+  <% end %>
+
+  <% @stars.each do |detail| %>
+    <div class=" pas_idee" >
+      <div class="card-image"><%= cl_image_tag detail.photo.key %></div>
+        <div class="card-description">
+      <%= detail.name %>
+      <%= detail.price_per_night%>
+      </div>
+    </div>
+  </div>
+  <% end %>
 
 
 
-<% @books_stars.each do |booking| %>
-  <%= booking.star.name %>
-  <%= booking.star.price_per_night %>
-  <%= booking.status %>
-  <%= booking.total_price %>
+  <% @books_stars.each do |booking| %>
+    <div class=" pas_idee">
+      <div class="card-image"><%= cl_image_tag booking.star.photo.key %></div>
+        <div class="card-description">
+          <%= booking.star.name %>
+          <%= booking.star.price_per_night %>
+          <%= booking.status %>
+          <%= booking.total_price %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
-<% end %>
+</div>
 
 
 
