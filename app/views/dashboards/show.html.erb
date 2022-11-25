@@ -1,33 +1,9 @@
 <%= render "shared/navbar" %>
-<div class = "container_dash">
-<div class="title_dashboard">
-<h1 class="title_dashboard">Mon dashboard</h1>
-
-<% @bookings.each do |element|%>
-  <%= element.status %>
-  <%= element.arrival_date %>
-  <%= element.departure_date %>
-  <%= element.total_price%>
-  <%= link_to "accept", accept_host_booking_path(element) , data: { turbo_method: :patch } %>
-  <%= link_to "decline", decline_host_booking_path(element) , data: { turbo_method: :patch } %>
-<% end %>
-
-<% @stars.each do |detail| %>
-  <%= detail.name %>
-  <%= detail.price_per_night%>
-<% end %>
-<div class= "page-dash">
-
-
-
-
-
-  <%= link_to "create star", new_host_star_path %>
 
   <div class = "container_dash">
-  <h4 class="button_etoile_dash"><%= link_to "create your etoile", stars_path %></h4>
+  <h4 class="button_etoile_dash"><%= link_to "create your etoile",  new_host_star_path %></h4>
     <div class="title_dashboard">
-    
+
 
   <h1>Mon dashboard</h1>
 <%# si size booking = 1 donc element au milieu avec grid, grid area %>
@@ -54,13 +30,7 @@
         <% end %>
       </div>
 
-
     <h5><div class="card-header margin-head" >My stars </h5></div>
-
-
-
-
-
 
     <div class= "grid-dash">
       <% @stars.each do |detail| %>
@@ -91,18 +61,9 @@
               <div><%= booking.status %> </div>
               <div> <%= booking.total_price%></div>
             </div>
-
                 <div class = "button-dach-accep" >
-                  <form method="patch" class="button_to">
-
-                  <button type="submit">ACCEPT</button>
-                  <input name="authenticity_token" type="hidden" value="10f2163b45388899ad4d5ae948988266befcb6c3d1b2451cf657a0c293d605a6"/>
-                  </form>
-
-                  <form method="patch" class="button_to">
-                  <button type="submit">DECLINE</button>
-                  <input name="authenticity_token" type="hidden" value="10f2163b45388899ad4d5ae948988266befcb6c3d1b2451cf657a0c293d605a6"/>
-                  </form>
+                  <%= link_to "accept", accept_host_booking_path(booking) , data: { turbo_method: :patch } %>
+                  <%= link_to "decline", decline_host_booking_path(booking) , data: { turbo_method: :patch } %>
                 </div>
             </div>
           </div>
