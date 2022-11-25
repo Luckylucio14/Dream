@@ -15,6 +15,16 @@
   <%= detail.price_per_night%>
 <% end %>
 
+<form method="patch" class="button_to">
+<button type="submit">ACCEPTED</button>
+<input name="authenticity_token" type="hidden" value="10f2163b45388899ad4d5ae948988266befcb6c3d1b2451cf657a0c293d605a6"/>
+</form>
+
+<form method="patch" class="button_to">
+<button type="submit">DECLINED</button>
+<input name="authenticity_token" type="hidden" value="10f2163b45388899ad4d5ae948988266befcb6c3d1b2451cf657a0c293d605a6"/>
+</form>
+
 
 
 <% @books_stars.each do |booking| %>
