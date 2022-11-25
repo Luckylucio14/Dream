@@ -1,3 +1,92 @@
-.title_navbar h1 {
+.page-dash{
+  margin: 50px 100px;
+}
+
+
+.title_dashboard {
   display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+  .grid-dash{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    margin: 50px 100px;
+  }
+
+  .card-header{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 100px;
+  }
+
+
+  .link {
+  background-color: purple;
+  color: silver;
+  border-radius: 30px;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  box-shadow: 2px 2px 3px purple;
+
+  }
+
+  .link:hover{
+    background-color: silver;
+    color: purple;
+    border-radius: 30px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+  }
+
+  // .create {
+  // background-color: purple;
+  // color: silver;
+  // border-radius: 30px;
+  // width: 200px;
+  // height: 70px;
+  // margin-top: 25px;
+  // text-align: center;
+  // box-shadow: 2px 2px 3px purple;
+
+
+  // }
+
+  .margin-head{
+    margin-left: 100px;
+  }
+
+
+  .button-dach-accep {
+    display: flex;
+    margin: 10px;
+    justify-content: space-evenly;
+}
+
+.booking_star_dispo{
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.button_etoile_dash{
+  margin-top: 30px;
+  margin-left: 100px;
+  a {
+    color:rgb(251, 185, 255);
+    text-decoration: none;
+    background-color: rgba($color: #e9c9f8, $alpha: 0.2);
+    border-radius: 10px;
+    padding: 5px;
+  }
+}
+
+.button_etoile_dash a:hover{
+  color: rgb(207, 98, 213);
+  background-color: rgba($color: #e9c9f8, $alpha: 0.6);
 }
