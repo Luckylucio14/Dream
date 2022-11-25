@@ -6,7 +6,6 @@ class Host::StarsController < ApplicationController
     end
     
     def create
-        raise
         @current_user = current_user
     
         @star = Star.new(star_params)
