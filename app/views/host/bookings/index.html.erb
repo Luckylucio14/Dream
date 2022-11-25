@@ -1,0 +1,18 @@
+<h1> Accepted booking </h1>
+
+
+
+
+<div></div><form user="/controller/bookings" class="button_to">
+    <input name="authenticity_token" type="hidden" value="10f2163b45388899ad4d5ae948988266befcb6c3d1b2451cf657a0c293d605a6" autocomplete="off"/>
+</form>
+  <%= button_to "Accept", accept_host_booking_path(@booking), method: :patch %>
+  <%= button_to "Decline", decline_host_booking_path(@booking), method: :patch %>
+
+  <% @bookings.each do |booking| %>
+  <div class="card">
+  <%= @star_books.status %>
+  <%= booking.arrival_date %>
+
+  </div>
+<% end %>
